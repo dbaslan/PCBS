@@ -43,15 +43,17 @@ has flashed. Press any key to begin. (You can end the experiment at any time by
 pressing Escape.)""")
 
 end = xp.stimuli.TextScreen("The End", """The experiment is now over, your 
-answers have been recorded in the file "data.csv". Thank you for your 
-participation. Press any key to exit.""")
+answers have been recorded in the csv file with the name or identifier you 
+entered. Thank you for your participation. Press any key to exit.""")
+
+ask_name = xp.io.TextInput("Please enter a name or identifier:")
 
 beep.preload()
 disk.preload()
 
 # start experiment
 xp.control.start()
-
+identity = ask_name.get()
 title.present()
 exp.keyboard.wait()
 blank.present()
@@ -77,14 +79,16 @@ for block in range(number_of_blocks):
         answer, time = exp.keyboard.wait([xp.misc.constants.K_1,
                                           xp.misc.constants.K_2,
                                           xp.misc.constants.K_3,
-                                          xp.misc.constants.K_4,])
+                                          xp.misc.constants.K_4])
         answers.append(key[0])
         answers.append(key[1])
         answers.append(key_values[answer])
+        blank.present()
         exp.clock.wait(500)
 
 # create csv file, add header, write experiment results into file
-file = open("data.csv", "w")
+filename = "data_" + identity + ".csv"
+file = open(filename, "w")
 file.write("number of flashes,number of beeps,perceived flashes")
 for index, answer in enumerate(answers):
     if index % 3 == 0:
