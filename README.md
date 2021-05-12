@@ -23,9 +23,10 @@ Running the Experiment
 ----------------------
 
 The experiment can be started by running the script 
-[main.py](main.py). By default, it will launch in 
-windowed mode. It can be launched in full-screen mode by commenting out 
-the relevant piece of code in the script (line 27):
+[main.py](https://github.com/dbaslan/PCBS-project/blob/main/main.py). 
+By default, it will launch in windowed mode. It can be launched in 
+full-screen mode by commenting out the relevant piece of code in the script 
+(line 27):
 ```python
 xp.control.set_develop_mode(True)
 ```
@@ -47,27 +48,32 @@ Accessing the Results
 
 Once the experiment is finished, the results are automatically saved into 
 a csv file. The results from a previous test run can be found in 
-[data.csv](data.csv).
+[data.csv](https://github.com/dbaslan/PCBS-project/blob/main/data.csv).
 
 Visualizing the Data
 ----------------------
 
-Run the script [grapher.py](grapher.py) and 
+Run the script 
+[grapher.py](https://github.com/dbaslan/PCBS-project/blob/main/grapher.py) and 
 specify which csv file to work on when prompted, in order to visualize the 
 data and save the results as a png file. The visualization of 
-[data.csv](data.csv) is available in 
-[data_graph.png](data_graph.png) as an example.
+[data.csv](https://github.com/dbaslan/PCBS-project/blob/main/data.csv) 
+is available in 
+[data_graph.png](https://github.com/dbaslan/PCBS-project/blob/main/data_graph.png) 
+as an example:
+
+![data_graph](/data_graph.png)
 
 Technical Information
 ----------------------
 
 The scripts were written in Python 3.8.8, they have been 
 tested on Windows 10, and run without issue. 
-[main.py](main.py) uses the 
+[main.py](https://github.com/dbaslan/PCBS-project/blob/main/main.py) uses the 
 [expyriment](https://www.expyriment.org/) and 
 [random](https://docs.python.org/3/library/random.html) modules, while 
-[grapher.py](grapher.py) uses the 
-[pandas](https://pandas.pydata.org/) and 
+[grapher.py](https://github.com/dbaslan/PCBS-project/blob/main/grapher.py) 
+uses the [pandas](https://pandas.pydata.org/) and 
 [matplotlib](https://matplotlib.org/) modules. 
 
 In case the experiment fails to start, try to restart Python and run the 
