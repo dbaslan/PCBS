@@ -23,7 +23,7 @@ Running the Experiment
 ----------------------
 
 The experiment can be started by running the script 
-[main.py](../PCBS-project/main/main.py). By default, it will launch in 
+[main.py](main/main.py). By default, it will launch in 
 windowed mode. It can be launched in full-screen mode by commenting out 
 the relevant piece of code in the script (line 27):
 ```python
@@ -47,26 +47,26 @@ Accessing the Results
 
 Once the experiment is finished, the results are automatically saved into 
 a csv file. The results from a previous test run can be found in 
-[data.csv](../PCBS-project/main/data.csv).
+[data.csv](main/data.csv).
 
 Visualizing the Data
 ----------------------
 
-Run the script [grapher.py](../PCBS-project/main/grapher.py) and 
+Run the script [grapher.py](main/grapher.py) and 
 specify which csv file to work on when prompted, in order to visualize the 
 data and save the results as a png file. The visualization of 
-[data.csv](../PCBS-project/main/data.csv) is available in 
-[data_graph.png](../PCBS-project/main/data_graph.png) as an example.
+[data.csv](main/data.csv) is available in 
+[data_graph.png](main/data_graph.png) as an example.
 
 Technical Information
 ----------------------
 
 The scripts were written in Python 3.8.8, they have been 
 tested on Windows 10, and run without issue. 
-[main.py](../PCBS-project/main/main.py) uses the 
+[main.py](main/main.py) uses the 
 [expyriment](https://www.expyriment.org/) and 
 [random](https://docs.python.org/3/library/random.html) modules, while 
-[grapher.py](../PCBS-project/main/grapher.py) uses the 
+[grapher.py](main/grapher.py) uses the 
 [pandas](https://pandas.pydata.org/) and 
 [matplotlib](https://matplotlib.org/) modules. 
 
